@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=$@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LIBDIR@
+includedir=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: Threading Building Blocks
+Description: Intel's parallelism library for C++
+URL: https://github.com/oneapi-src/oneTBB
+Version:
+Libs: -L${libdir} -ltbb -latomic
+Cflags:

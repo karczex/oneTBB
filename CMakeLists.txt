@@ -227,6 +227,11 @@ else()
     install(FILES "README.md"
             DESTINATION ${CMAKE_INSTALL_DOCDIR}
             COMPONENT devel)
+
+    configure_file(tbb.pc.in tbb.pc @ONLY)
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/tbb.pc
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+
     # -------------------------------------------------------------------
 endif()
 
